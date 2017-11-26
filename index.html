@@ -1,38 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<script src="https://demidtes.github.io/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
-<script src="https://demidtes.github.io/aframe/build/aframe-ar.js"></script>
+	<meta charset="utf-8">
+	<title>Доповнена Реальність</title>
+
+	<!-- Стилі BootsTrap -->
+	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet"/>
 	
-<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
-<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>	
+	<!-- Стилі для Сайту -->
+	<link href="css/grayscale.css" rel="stylesheet">
 
-<script>THREEx.ArToolkitContext.baseURL = 'https://demidtes.github.io/three.js/'</script>
+	<!-- Підключення шрифтів -->
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+	<link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+	<link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'/>
+	<script type="text/javascript" src="js/script.js"></script>
 
-
+	<style>
+		#up {
+		display:block;
+		position:fixed;
+		opacity:0.6;
+		right:30px;
+		bottom:50px;
+		cursor:pointer;
+		animation: animscroll 2s ease infinite;
+	}
+	#up:hover {
+		opacity:0.9;
+	}
+	</style>
 </head>
-<body style='margin : 0px; overflow: hidden;'>
-	
-<a-scene embedded artoolkit='sourceType: webcam;'>
-	<a-marker preset='hiro'>
-	
-		<a-entity json-model="src: url(monkey1.json);" scale="0.5 0.5 0.5" rotation="-90 0 0">
-		
-			<a-animation attribute="rotation"
-				dur="3000"
-				from="-90 0 0"
-				to="270 0 0"
-				direction='normal'
-				easing= "linear"
-				repeat="indefinite">
-			</a-animation>
+
+<body id="page-top">
+
+<!-- Створення меню -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
 			
-		</a-entity>	
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#about">Що це?</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#contact">Перегляд</a>
+				</li>
+				
+
+				<li class="nav-item">
+					<a class="nav-link js-scroll-trigger" href="#using">Використання</a>
+				</li>	
+
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+
+		<!-- Перша сторінка -->
+		<header class="masthead">
+			<div class="intro-body">
+			<div class="container">
+				<div class="row">
+				<div class="col-lg-8 mx-auto">
+					<h1 class="brand-heading">Доповнена реальність</h1>
+					
+					<a href="#about" class="btn btn-circle js-scroll-trigger">
+					<i class="fa fa-angle-double-down animated"></i>
+					</a>
+				</div>
+				</div>
+			</div>
+			</div>
+		</header>
+
+		<!-- Секція INFO -->
+    <section id="about" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Що таке Доповнена Реальність?</h2>
+			
+        <p>
+					Термін, що позначає всі проекти, спрямовані на доповнення реальності будь-якими віртуальними елементами. Доповнена реальність — 
+					складова частина змішаної реальності (англ. mixed reality), в яку також входить «доповнена віртуальність» (коли реальні об'єкти 
+					інтегруються у віртуальне середовище).
+				</p>
+			
+      	
+
+				<p>
+					Найпоширеніші приклади доповненої реальності - стрілка маршруту , відображення розташованих поруч кафе, ресторанів, пам'яток, вулиць 
+					і т.д. на сучаних картах чи навігаторах.
+				</p>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+		<!-- Секція EDUCATION -->
+		<section id="contact" class="download-section content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Спробуй AR</h2>
+            <p>
+							На цій сторінці ви можете переглянути декілька прикладів Доповненої Реальності
+						</p>
+						<a href="using.html" class="btn btn-default btn-lg" target="_blank">START!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+	
+    <section id="using" class="content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h1>Галузі використання Доповненої Реальності</h1>
+            <p>
+							<h3><a href="categories/maps.html" target="_blank">Карти</a></h3>
+						</p>
+						<p>
+							<h3><a href="categories/browsers.html" target="_blank">Браузери</a></h3>
+						</p>
+						<p>
+							<h3><a href="categories/education.html" target="_blank">Освіта</a></h3>						
+						</p>
+						<p>
+							<h3><a href="categories/medicine.html" target="_blank">Медицина</a></h3>
+						</p>
+          </div>
+        </div>
+      </div>
+		</section>
+
+
+		<!-- Секція GAMES 
+		<section id="contact" class="download-section content-section text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>Спробуй AR</h2>
+            <p>
+							На цій сторінці ви можете переглянути декілька прикладів Доповненої Реальності
+						</p>
+						<a href="games.html" class="btn btn-default btn-lg" target="_blank">START!</a>
+          </div>
+        </div>
+      </div>
+    </section>-->	
+
+
+		<!-- Авторство -->
+    <footer>
+      <div class="container text-center">
+        <p>Copyright &copy; Demid Teslenko 2017</p>
+      </div>
+    </footer>
+
+		<!-- Підключення Bootstrap скриптів -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.js"></script>
+
+
+    <script src="vendor/jquery-easing/jquery.easing.js"></script>
+
+    
+		<script src="js/grayscale.js"></script>
 		
-		</a-marker>
-	<a-entity camera></a-entity>
-
-</a-scene>
-
+		<div id="up" onclick="ScrollUp();return!1;">
+			<img src="img/str.png" alt="Up"/>
+		</div>
+		
 </body>
+
 </html>
