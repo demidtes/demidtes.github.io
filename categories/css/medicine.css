@@ -1,0 +1,21 @@
+header .blocks {
+	background: url(../img/eleven.jpg) left center no-repeat;
+	padding: 8.33333% 4.16667% 8.33333% 36.66667%;
+	background-size: 33.91667% auto;
+}
+#implant .blocks {
+	background:  url(../img/twelve.jpg) 4.16667% center no-repeat;
+	padding: 10% 4.16667% 10% 50%;
+	background-size: 41.66667% auto;
+}
+
+header:after {
+	background-image: url(../img/ten.jpg);
+}
+#implant:after {
+	background-image: url(../img/thirteen.jpg);
+}
+
+footer {
+	background: #000000;
+}

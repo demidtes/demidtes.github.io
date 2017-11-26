@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../js/aframe.min.js"></script>
+<script src="../js/aframe-ar.js"></script>
+
+<script src="../js/ar.js"></script>
+<script src="../js/ar1.js"></script>
+
+<script>THREEx.ArToolkitContext.baseURL = 'https://demidtes.github.io/three.js/'</script>
+
+
+</head>
+<body style='margin : 0px; overflow: hidden;'>
+	
+<a-scene embedded artoolkit='sourceType: webcam;'>
+	<a-marker preset='hiro'>
+	
+		
+		<a-image src="http://localhost/SiteOl/img/i.png"  rotation="-90 0 0">
+			<a-animation attribute="rotation"
+				dur="4000"
+				from="-90 0 0"
+				to="-90 0 360"
+				direction='normal'
+				easing= "linear"
+				repeat="indefinite">
+			</a-animation>
+		</a-image>	
+		</a-entity>
+		
+		</a-marker>
+	<a-entity camera></a-entity>
+
+</a-scene>
+
+</body>
+</html>
