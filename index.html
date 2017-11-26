@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://demidtes.github.io/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
-<script src="https://demidtes.github.io/aframe/build/aframe-ar.js"></script>
-
-<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v3.12.4/dist/aframe-extras.min.js"></script>
-<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<script src="https://github.com/demidtes/WebAR/aframe/examples/vendor/aframe/build/aframe.min.js"></script>
+<script src="https://github.com/demidtes/WebAR/aframe/build/aframe-ar.js"></script>
 
 <script>THREEx.ArToolkitContext.baseURL = 'https://demidtes.github.io/three.js/'</script>
 
@@ -16,7 +13,7 @@
 <a-scene embedded artoolkit='sourceType: webcam;'>
 	<a-marker preset='hiro'>
 	
-		<a-entity json-model="src: url(http://localhost/ar/monkey1.json);" scale="0.5 0.5 0.5" rotation="-90 0 0">
+		<a-entity json-model="src: url(https://github.com/demidtes/demidtes.github.io/monkey1.json);" scale="0.5 0.5 0.5" rotation="-90 0 0">
 		
 			<a-animation attribute="rotation"
 				dur="3000"
